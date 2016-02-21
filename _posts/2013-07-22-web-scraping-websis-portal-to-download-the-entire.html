@@ -1,0 +1,25 @@
+---
+layout: post
+title: Web scraping websis portal to download the entire IT 7th semester data
+date: '2013-07-22T04:13:00+05:30'
+tags: []
+tumblr_url: http://prashantb.tumblr.com/post/56089805069/web-scraping-websis-portal-to-download-the-entire
+---
+<blockquote>
+<p><span>Here is the final result in action: </span><a href="http://prashantb.com/itdata/" target="_blank">http://prashantb.com/itdata/</a></p>
+</blockquote>
+
+<p>I recently scraped websis manipal portal and downloaded their entire data for 7th semester IT students. I used this amazing simple_html_dom PHP library to scrap data. Web scraping with this PHP library is very easy but the problem arises when there is a login page in the way of your data. How do you bypass the login page? The answer is, you don&rsquo;t. So the goal is to log in to the websis portal, download all their data and save it in your local machine. Getting data when you already know the log in credentials is not so tough as many have already made attendance status apps on that. But what if you want to log in without knowing the log in credentials? How do you do that?</p>
+
+<blockquote>
+<p>Why do you need web APIs when you can use the good old fashioned web scraping?</p>
+</blockquote>
+
+<p>I luckily had all the registration numbers of all IT 7th semester students. And it is not very difficult to get hold of that list (Hint: use Google). But the tough part is to get the corresponding birth date that is required to log in. There are two ways of doing this. Either you can contact all 7th Sem IT students and ask for their birth dates or you could run a simple loop. I know a few people who&rsquo;d choose the former.</p>
+<p>Anyway, I noticed that most students in my batch were born in 1991 or 1992. So I ran a loop from 1st January 1991 to 31st December 1992 for each registration number and tried to log in in the websis portal each time. And when the combination of birth date and registration number was correct, I saved that combination in a database. Yes, this is not the most efficient way of doing this, but I had a lot of time and hey, it worked. </p>
+<p>Okay, lets get into some more details. There are 730 days between 1st January 1991 and 31st December 1992. And there are 160 students in IT 7th sem. So in the worst case scenario, where everyone was born on 31st December 1992, I will have to run the loop 730*160 times which is more than 1 lakh. So in the worst case, I need to request their webpage more than 1 lakh times to successfully obtain log in credentials of 160 students. That amount of requests in such a short span of time can cause a lot of server load and can even lead to crashing of the server. It took me more than 10 hours to download all the log in combinations successfully. Yes, it took more than 10 hours for the loop to terminate. As time went on, their server was responding slower and slower and even displayed 503 messages more than a couple of times. But, in the end, it worked. I had what I needed, and after that it was a cake walk.</p>
+<p>Once I had the login credentials of all the students, I easily downloaded all their data into my local machine. And it was very fast. Within 2-3 minutes, I had all the data of IT 7th sem students. It was like data porn.</p>
+<p>After I had downloaded all the data, I did some interesting data analysis and produced some statistics from that data.</p>
+<p>However, web scraping without permission is a copyright infringement (Not the first time <em>they</em> will be accusing me of that, though). Anyway, it was my duty to warn you and if you are still going to go ahead and scrap websis, do use a VPN to protect your IP. It will not take them much time to figure out who is trying to fuck with their website. </p>
+<p>You can find the source code <a href="https://github.com/prashantbaid/datam" target="_blank">here</a>. </p>
+<p>Here is the final result in action: <a href="http://prashantb.com/itdata/" target="_blank">http://prashantb.com/itdata</a></p>

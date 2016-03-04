@@ -24,9 +24,7 @@ layout: compress
     <style>{% include main.css %}</style>
 </head>
 <body>
-  {% for repository in site.github.public_repositories %}
-    * [{{ repository.name }}]({{ repository.html_url }})
-  {% endfor %}
+    url is - {{site.github.hostname}}
     <div class="wrapper">
         {% if page.tag %}
             <div class="post">

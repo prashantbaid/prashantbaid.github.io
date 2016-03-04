@@ -15,7 +15,6 @@ layout: compress
     <title>{{ site.name }} &middot; {{ page.title }}</title>
 
     <!-- Jekyll Plugin -->
-    {% seo %}
 
     {% include favicon.html %}
 
@@ -25,7 +24,9 @@ layout: compress
     <style>{% include main.css %}</style>
 </head>
 <body>
-
+  {% for repository in site.github.public_repositories %}
+    * [{{ repository.name }}]({{ repository.html_url }})
+  {% endfor %}
     <div class="wrapper">
         {% if page.tag %}
             <div class="post">

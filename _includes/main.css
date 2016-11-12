@@ -301,7 +301,6 @@ h4 {
   font-size: 1.6rem;
 }
 a {
-  color: #4b0082;
   text-decoration: underline;
 }
 p {
@@ -456,7 +455,7 @@ pre {
 .home > .list:hover .title,
 .blog > .list:hover .title,
 .projects > .list:hover .title {
-  color: #4b0082;
+
 }
 .home > .list aside,
 .blog > .list aside,

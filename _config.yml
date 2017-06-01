@@ -1,52 +1,33 @@
-name: Prashant Baid
-bio: 'The Sound of Silence'
-
-# main text of home
-picture: 'assets/images/avatar.jpeg'
-
-url: http://prashantb.com
-# your url: http://USERNAME.github.io
-# if testing locally: http://localhost:3000
-
-permalink: /:title/
-
-markdown: kramdown
-highlighter: rouge
-
-analytics-google: 'UA-MYANALYTICS'
-disqus: prashantbaid
-
-# if you don't have any of social below, set to false then
-facebook: baid.prashant
-twitter: prashantbaid
-instagram: prashantbaid
-#linkedin: mylinkedin
-#youtube: myyoutube
-#spotify: myspotify
-github: prashantbaid
+# Site settings
+title: "Prashant Baid"
 email: prashantvbaid@gmail.com
+description: "Duct Tape Dragon"
+baseurl: ""
+url: "http://prashantb.com/"
+title_description: "The Sound of Silence"
+title_image: "images/dp.jpg"
+google_analytics: "UA-29156353-1"
+disqus_account: prashantbaid
+github_repository: https://github.com/prashantbaid/prashantbaid.github.io
+post_limit: 7
 
-exclude: [README.md, Gemfile, Gemfile.lock, node_modules, gulpfile.js, package.json, _site, src, vendor]
+# Social usernames/URLs
+twitter_username: prashantbaid
+github_username:  prashantbaid
+instagram_username: prashantbaid
+reddit_username:
+stackoverflow_link: https://stackoverflow.com/users/648737/prashant-baid
 
-# if you don't need pagination, comment the *paginate* configs below
-# paginate: 5
-# paginate_path: "blog/:num/"
+# Footer
+footer_left: "<i>\"Sin ought to be something exquisite, my dear boy.\"</i>"
+footer_right: "&lt;/&gt; on <a href=\"https://github.com/prashantbaid/prashantbaid.github.io\">Github</a> &nbsp;<i class=\"fa fa-github-alt\"></i>"
 
-# if you don't need projects, comment the *projects* configs below
-projects: true
+# Build settings
+markdown: kramdown
 
-# if you don't need about or blog, comment them out below
-about: true
-blog: true
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
 
-gems:
-  - jemoji
-  - jekyll-mentions
-  - jekyll-seo-tag
-  - jekyll-feed
-  - jekyll-sitemap
-  - jekyll-gist
-  - jekyll-paginate
-
-jekyll-mentions:
-    base_url: https://github.com
+permalink: pretty
+exclude: [vendor]

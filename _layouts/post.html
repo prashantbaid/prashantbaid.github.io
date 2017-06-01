@@ -12,7 +12,21 @@ layout: default
 <div class="container-fluid single">
   <div class="row">
 
+
+
+
+
     <div itemscope itemtype="http://schema.org/Article" class="col-md-12 article">
+      <div class ="posthead">
+        <a href = "/index">
+          <div class="gravatar">
+              <img src="{{ site.title_image }}" class="img-circle about-image" height="150" width="150" alt="{{ site.title }}" />
+          </div>
+          <div class="author-text">
+              {{ site.title_description }}
+          </div>
+        </a>
+      </div>
       {% if site.data.thumbnail[page.thumbnail] %}
       <div class="thumb">
         <img itemprop="image" src="{{ site.data.thumbnail[page.thumbnail] }}" alt="Thumbnail: {{ page.thumbnail }}" />
@@ -112,9 +126,9 @@ layout: default
       </div>
       {% endif %}
 
-      {% if site.related_posts.length > 0 %}
+      {% if site.posts > 0 %}
       <div class="content-panel related clearfix">
-        {% for post in site.related_posts limit:1 %}
+        {% for post in site.posts limit:1 %}
         <div class="related-header">
           <a href="{{ site.baseurl }}{{ post.url }}">Read More</a>
         </div>

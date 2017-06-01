@@ -5,7 +5,7 @@ description: "Duct Tape Dragon"
 baseurl: ""
 url: "http://prashantb.com/"
 title_description: "The Sound of Silence"
-title_image: "images/dp.jpg"
+title_image: "https://raw.githubusercontent.com/prashantbaid/prashantbaid.github.io/master/images/dp.jpg"
 google_analytics: "UA-29156353-1"
 disqus_account: prashantbaid
 github_repository: https://github.com/prashantbaid/prashantbaid.github.io

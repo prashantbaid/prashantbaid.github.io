@@ -396,6 +396,78 @@ ul {
 	}
 
 }
+.posthead {
+
+	width: 100%;
+	margin-bottom: 50px;
+	background-color: $medium;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	padding-left: 30px;
+	padding-right: 30px;
+	margin-top: 20px;
+	box-shadow: 0px 0px 0px 0px, 0px 6px 12px rgba(0, 0, 0, 0.2);
+	border-bottom: 5px solid $pink;
+
+	@media (min-width: $screen-sm-min) {
+		width: 90%;
+		margin-left: 5%;
+	}
+
+	@media (min-width: $screen-md-min) {
+		width: 70%;
+		margin-left: 15%;
+	}
+
+	@media (min-width: $screen-lg-min) {
+		width: 50%;
+		margin-left: 25%;
+	}
+
+  		.gravatar {
+  			width: 100%;
+  			margin-top: -80px;
+  			text-align: center;
+  		}
+
+  		.author-header {
+  			font-family: 'Londrina Shadow', cursive;
+  			color: $pink;
+  			margin-top: 0px;
+  			padding-top: 15px;
+  			font-size: 24px;
+
+  			@media (min-width: $screen-sm-min) {
+  				font-size: 32px;
+  				margin-top: 0px;
+  			}
+
+  			@media (min-width: $screen-md-min) {
+  				font-size: 40px;
+  				margin-top: 0px;
+  			}
+  		}
+
+  		.author-text {
+  			text-align: center;
+  			margin-top: 30px;
+  			font-family: 'Sue Ellen Francisco', sans-serif;
+  			font-size: 24px;
+				color: $white;
+
+  			b {
+  				font-size: 24px;
+  			}
+				a, a:active {
+					color: $white;
+				}
+
+				a:hover {
+					color: $white;
+				}
+  		}
+
+}
 
 .all-posts {
 	margin-left: 0px;
@@ -453,7 +525,7 @@ ul {
 	max-height: 100%;
 
 	h1, h2, h3, h4, h5, h6 {
-		font-family: 'Montserrat', sans-serif;
+		font-family: 'Londrina Shadow', sans-serif;
 		margin-bottom: 10px;
 	}
 

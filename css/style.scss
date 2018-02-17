@@ -951,6 +951,31 @@ ul {
 	}
 }
 
+.btn-happy {
+	background-color: $pink;
+	border-color: $pink;
+	color: $white;
+	&:hover {
+		background-color: $pink;
+		border-color: $pink;
+		color: $white;
+	}
+	&:active {
+		background-color: $pink;
+		border-color: $pink;
+		color: $white;
+		outline: none !important;
+   		box-shadow: none;
+	}
+	&:focus {
+		background-color: $pink;
+		border-color: $pink;
+		color: $white;
+		outline: none !important;
+   		box-shadow: none;
+	}
+}
+
 .dropdown-menu {
 	background-color: $pink;
 	color: $white;

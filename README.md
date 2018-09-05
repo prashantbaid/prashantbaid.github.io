@@ -1,1 +1,1 @@
-Personal Website powered by Jekyll - http://prashantb.com
+Personal Website powered by Hugo - http://prashantb.com

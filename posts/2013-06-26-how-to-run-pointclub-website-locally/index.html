@@ -1,0 +1,87 @@
+<!DOCTYPE html><html><head>
+
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="chrome=1">
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="referrer" content="no-referrer">
+
+<meta name="description" content="Prashant Baid&#39;s Blog">
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:domain" content="http://prashantb.com/">
+
+<meta name="twitter:image" content="http://prashantb.com/tn.png">
+<meta name="twitter:title" property="og:title" itemprop="title name" content="PB">
+<meta name="twitter:description" property="og:description" itemprop="description" content="Prashant Baid&#39;s Blog">
+<meta name="og:type" content="website">
+<meta name="og:url" content="http://prashantb.com/">
+<meta name="og:image" itemprop="image primaryImageOfPage" content="http://prashantb.com/tn.png">
+
+<link rel="shortcut icon" href="http://prashantb.com/sam.ico" id="favicon">
+<link rel="stylesheet" href="http://prashantb.com/css/style.css">
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Didact+Gothic">
+
+<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+
+
+
+
+
+
+
+<title>
+
+How to run pointclub website locally
+
+</title></head><body>
+<div class="wrap">
+<div class="section" id="title">How to run pointclub website locally</div>
+
+<div class="section" id="content">Wed Jun 26, 2013 &#183; 520 words
+
+<hr/><p>To set up pointclub locally, you first need the code in your local machine. So to save all your files locally<span>, you need to run the following command in your terminal-</span></p>
+<pre><span>git clone </span><a href="https://github.com/SciDevs/pointclub.git" target="_blank">https://github.com/SciDevs/pointclub.git</a></pre>
+<p>This may take a while.</p>
+<p>After all the files have been downloaded, you are all ready to go. But you need to work with the dev branch, so to change the branch from master to dev, run the following command-</p>
+<pre>git checkout dev</pre>
+<p>Now, that you have the code, you need to configure your local server to run the code.</p>
+<p>You have to first set up a virtual host.</p>
+<p>To set up a virtual host, you need to first edit your hosts file. If you are using linux it must be at location <strong>/etc/hosts</strong> and if you are using windows, then it must be located at <strong>c:\windows\system32\drivers\etc\hosts</strong></p>
+<p>Open this file in a text editor and add the following line at the end-</p>
+<pre>127.0.0.1 pointclub.local</pre>
+<p><span>Save the file. Now try to type <em>pointclub.local</em> in your browser, it will show you the the same page as localhost. This name will be used to run pointclub website locally. You can choose any name you want to.</span></p>
+<p><span>After this, you need to tell apache that you will be using a virtual host. To do this, you need to edit the httpd.conf file located inside your apache folder. In linux, it is normally at this location <strong>/etc/hosts/apache&lt;version&gt;/httpd.conf</strong>. If you using windows and wamp, it is at <strong>C:/wamp/bin/apache/Apache2.2.21/conf/</strong></span></p>
+<p><span>At around line number 467, under &ldquo;# Virtual hosts&rdquo;, uncomment (remove the hashtag [#]) the line &ldquo;<strong>Include conf/extra/httpd-vhosts.conf</strong>&rdquo;.</span></p>
+<p><span>Save the file.</span></p>
+<p><span>Now open up the </span><span><strong>httpd-vhosts.conf</strong> file located at </span><strong>/</strong><span><strong>conf/extra/</strong> of your apache folder in a text editor and add the following lines at the end-</span></p>
+<p><span>&lt;VirtualHost *:80&gt;</span> <br/><span>    ServerAdmin admin@localhost</span> <br/><span>    DocumentRoot &ldquo;C:/wamp/www&rdquo;</span> <br/><span>    ServerName localhost</span> <br/><span>    ServerAlias <a href="http://www.localhost.com" target="_blank">www.localhost.com</a></span> <br/><span>    ErrorLog &ldquo;logs/localhost-error.log&rdquo;</span> <br/><span>    CustomLog &ldquo;logs/localhost-access.log&rdquo; common</span>&lt;br/ &gt; <span>&lt;/VirtualHost&gt;</span><span></span></p>
+<p><span> </span> <br/><span>&lt;VirtualHost *:80&gt;</span> <br/><span>    DocumentRoot &ldquo;&lt;project folder&gt;\pointclub\public&rdquo;</span> <br/><span>    ServerName pointclub.local</span> <br/><span>    &lt;Directory &ldquo;&lt;project folder&gt;\pointclub\public&rdquo;&gt;</span> <br/><span>        Options Indexes FollowSymLinks MultiViews</span> <br/><span>        AllowOverride All</span> <br/><span>        Order allow,deny</span> <br/><span>        Allow from all</span> <br/><span>    &lt;/Directory&gt;</span> <br/><span>&lt;/VirtualHost&gt;</span><span> </span></p>
+<p><span> </span></p>
+<p><span>Make sure you don&rsquo;t miss the line <strong>AllowOverride All</strong>. Otherwise, apache may ignore your <em>.htacess</em> file.</span></p>
+<p><span>Now, restart your local server. If you have followed the above steps carefully, pointclub website must open in your browser when you type pointclub.local.</span></p>
+<p><span>Okay, now that the code is up and running locally, you need to take a dump of the database located at phpmyadmin.pointclub.com. Log in to the website, select <strong>rewardly</strong> database and click on export tab. And download the database. This may take a while.</span></p>
+<p><span>The database is around 40-50MB large and even after compressing it, it is around 8-10MB which is much more than the default 2MB import file size allowed in phpmyadmin. So to increase the size of import files, open <strong>php.ini</strong> file. Locate <strong>upload_max_filesize</strong>, <strong>post_max_size</strong>, <strong>memory_limit</strong> and change it to your desired values. Now import the database in your local phpmyadmin and you are done.</span></p>
+<p><span>Now your code, virtual host and database is set up. Now open<strong> test.php</strong> file located at </span><strong>\pointclub\public\protected\config\ </strong>and change the database username and password to your own username and password and then you will finally be able to run the code.</p>
+</div>
+
+<div class="section bottom-menu"><hr/><p>
+<a href="/posts">back</a>
+ &#183;
+
+
+
+<a href="/posts">writing</a>
+
+
+&#183; <a href="/gallery">gallery</a>
+&#183; <a href="/about">who am I?</a>
+
+&#183; <a href="http://prashantb.com/">home</a></p></div>
+
+<div class="section footer">Sin ought to be something exquisite, my dear boy</div>
+</div>
+</body></html>

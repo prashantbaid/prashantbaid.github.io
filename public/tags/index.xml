@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on Prashant Baid</title>
+    <link>http://prashantb.com/tags/</link>
+    <description>Recent content in Tags on Prashant Baid</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 13 Nov 2016 17:36:41 +0000</lastBuildDate>
+    
+	<atom:link href="http://prashantb.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>2016</title>
+      <link>http://prashantb.com/tags/2016/</link>
+      <pubDate>Sun, 13 Nov 2016 17:36:41 +0000</pubDate>
+      
+      <guid>http://prashantb.com/tags/2016/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Book</title>
+      <link>http://prashantb.com/tags/book/</link>
+      <pubDate>Sun, 13 Nov 2016 17:36:41 +0000</pubDate>
+      
+      <guid>http://prashantb.com/tags/book/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Food Diary</title>
+      <link>http://prashantb.com/tags/food-diary/</link>
+      <pubDate>Fri, 24 May 2013 00:38:52 +0000</pubDate>
+      
+      <guid>http://prashantb.com/tags/food-diary/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Sixty Days Six App Shipments Challenge</title>
+      <link>http://prashantb.com/tags/sixty-days-six-app-shipments-challenge/</link>
+      <pubDate>Sun, 01 Jul 2012 12:27:59 +0000</pubDate>
+      
+      <guid>http://prashantb.com/tags/sixty-days-six-app-shipments-challenge/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

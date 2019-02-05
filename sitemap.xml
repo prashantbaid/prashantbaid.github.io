@@ -3,13 +3,18 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>http://prashantb.com/posts/2019-01-28-drawing-circles/</loc>
+    <lastmod>2019-02-05T21:09:57+05:30</lastmod>
+  </url>
+  
+  <url>
     <loc>http://prashantb.com/posts/2018-10-13-visiting-a-local-supermarket/</loc>
-    <lastmod>2018-10-13T02:11:18+05:30</lastmod>
+    <lastmod>2018-10-13T17:36:41+00:00</lastmod>
   </url>
   
   <url>
     <loc>http://prashantb.com/posts/2018-09-27-attending-a-fire-drill-at-workplace/</loc>
-    <lastmod>2018-09-27T23:21:35+05:30</lastmod>
+    <lastmod>2018-09-27T17:36:41+00:00</lastmod>
   </url>
   
   <url>
@@ -274,12 +279,6 @@
   </url>
   
   <url>
-    <loc>http://prashantb.com/</loc>
-    <lastmod>2018-10-13T02:11:18+05:30</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>http://prashantb.com/tags/book/</loc>
     <lastmod>2016-11-13T17:36:41+00:00</lastmod>
     <priority>0</priority>
@@ -297,8 +296,14 @@
   </url>
   
   <url>
+    <loc>http://prashantb.com/</loc>
+    <lastmod>2019-02-05T21:09:57+05:30</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>http://prashantb.com/posts/</loc>
-    <lastmod>2018-10-13T02:11:18+05:30</lastmod>
+    <lastmod>2019-02-05T21:09:57+05:30</lastmod>
     <priority>0</priority>
   </url>
   

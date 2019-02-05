@@ -26,13 +26,5 @@ googleAnalytics          = "UA-29156353-1"             # Tracking code, eg. "UA-
 
 [[params.mainMenu]]
     link = "/posts"
-    text = "writing"
-
-[[params.mainMenu]]
-    link = "/gallery"
-    text = "gallery"
-
-[[params.mainMenu]]
-    link = "/about"
-    text = "who am I?"
+    text = "Blog"
 
